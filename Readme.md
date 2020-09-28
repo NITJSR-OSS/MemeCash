@@ -4,7 +4,7 @@
 
 ![meme](https://raw.githubusercontent.com/NITJSR-OSS/MemeCash/master/readme_image.jpg)
 
-Hi! Welcome to this **amalgamation of a lot of tech** challenge for [Hactoberfest](https://hacktoberfest.digitalocean.com/). A project idea which just came out of nowhere and attempts to give its users free ethers (obviously test ether xD) in exchange of memes! (it's barter system all over again).
+Hi! Welcome to this **amalgamation of a lot of tech** challenge for [Hactoberfest](https://hacktoberfest.digitalocean.com/). A project idea which just came out of nowhere and attempts to give its users free ethers (obviously test ether xD) in exchange for memes! (it's barter system all over again).
 
   
 
