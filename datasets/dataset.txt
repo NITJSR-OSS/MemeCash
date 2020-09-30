@@ -1,1 +1,2 @@
-https://www.kaggle.com/electron0zero/memegenerator-dataset/home?select=memegenerator.csv
+Sample Dataset: https://www.kaggle.com/electron0zero/memegenerator-dataset/home?select=memegenerator.csv
+Use of any other relevant dataset is encouraged
