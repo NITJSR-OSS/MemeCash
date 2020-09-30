@@ -16,4 +16,4 @@ jobs:
     - uses: actionsx/prettier@v2
       with:
         # prettier CLI arguments.
-        args: --check "meme-cash-frontend/**/*.*"
+        args: --check "meme-cash-frontend/**/*.{js,css,html,less,scss,jsx}"
