@@ -1,0 +1,27 @@
+name: Linter
+
+# This action works with pull requests and pushes
+on:
+  pull_request:
+  push:
+    branches:
+    - master
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2 # Check out the repository first.
+    - uses: actionsx/prettier@v2
+      with:
+        # prettier CLI arguments.
+        args: --check "**/*.js"
+    - name: Lint Code Base
+      uses: github/super-linter@v3
+      env:
+        VALIDATE_ALL_CODEBASE: false
+        VALIDATE_JAVASCRIPT_STANDARD: false
+        VALIDATE_PYTHON: false
+        DEFAULT_BRANCH: master
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
