@@ -1,1 +1,4 @@
-https://www.kaggle.com/electron0zero/memegenerator-dataset/home?select=memegenerator.csv
+Sample Dataset: https://www.kaggle.com/electron0zero/memegenerator-dataset/home?select=memegenerator.csv
+
+Use the above dataset or refer the below blog to scrape images to train ML model:
+https://medium.com/@intprogrammer/how-to-scrape-google-for-images-to-train-your-machine-learning-classifiers-on-565076972ce
