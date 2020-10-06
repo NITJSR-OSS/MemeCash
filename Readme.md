@@ -14,7 +14,9 @@ Everyone is encouraged to participate, regardless of your skill level (If you do
 
 # Project Summary
 
-  
+-  ### Project Vision:
+
+![vision](https://raw.githubusercontent.com/NITJSR-OSS/MemeCash/master/memecash.jpg)
 
 The project can be roughly divided into three sections:
 
@@ -26,7 +28,7 @@ The project can be roughly divided into three sections:
 
   
 
--  ### Expectation from you:
+-  ### Expectations from you:
 
 - [ ] Some zeal and interest to work on the project.
 
