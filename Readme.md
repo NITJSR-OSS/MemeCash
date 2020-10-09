@@ -18,6 +18,11 @@ Everyone is encouraged to participate, regardless of your skill level (If you do
 
 ![vision](https://raw.githubusercontent.com/NITJSR-OSS/MemeCash/master/memecash.jpg)
 
+
+Please reference the presentation for the project here:
+Meme Cash Presentation(https://docs.google.com/presentation/d/1hSvBnUdkxAG1haJs2e7ehfjAAjPx31-TFuoSitOeQSg/edit?usp=sharing)
+
+
 The project can be roughly divided into three sections:
 
 - [ ] A backend based on the **ethereum** blockchain and **ipfs**.
