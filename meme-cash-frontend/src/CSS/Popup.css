@@ -24,3 +24,11 @@ input[type="file"] {
 .popup {
   z-index: 10;
 }
+.openModal {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #0000;
+  width: 30px;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #fff;
+}

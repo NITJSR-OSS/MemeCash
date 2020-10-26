@@ -16,7 +16,7 @@ class Upload extends Component {
   render() {
     return (
       <div>
-        <img src={this.state.file} id="uploaded-img" />
+        <img src={this.state.file} id="uploaded-img" alt="error" />
         <div className="button-wrap">
           <label className="new-button" htmlFor="upload">
             {" "}

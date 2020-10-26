@@ -22,7 +22,6 @@ class Counter extends Component {
   }
 
   render() {
-    const count = this.state.count;
     return (
       <div className="counter">
         <div className="btn-vote">

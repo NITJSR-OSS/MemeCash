@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Modal from "react-modal";
 import "../CSS/Popup.css";
 import Upload from "../Components/Upload";
@@ -17,7 +16,6 @@ const customStyles = {
 };
 
 function Popup() {
-  var subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);
   function openModal() {
     setIsOpen(true);
@@ -31,7 +29,9 @@ function Popup() {
 
   return (
     <div className="popup">
-      <button onClick={openModal}>+</button>
+      <button onClick={openModal} className="openModal">
+        +
+      </button>
       <Modal
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}
