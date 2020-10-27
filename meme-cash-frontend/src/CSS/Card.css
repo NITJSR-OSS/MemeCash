@@ -25,7 +25,7 @@
   color: #ddd;
   background-color: rgb(82, 6, 65);
   border: 1px solid rgb(31, 1, 24);
-  /* display: none; */
+  visibility: hidden;
 }
 .vote {
   position: relative;

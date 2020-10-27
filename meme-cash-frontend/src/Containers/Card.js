@@ -25,25 +25,11 @@ class Cards extends Component {
       });
   }
 
-  Card = () => {
-    this.Donate = (e) => {
-      e.target.style.opacity = "0.5";
-    };
-    this.Normal = (e) => {
-      e.target.style.opacity = "1";
-    };
-  };
-
   render() {
     return (
       <div className="card">
         <div className="image">
-          <img
-            onMouseOver={this.Donate}
-            onMouseLeave={this.Normal}
-            src={this.props.url}
-            alt="error"
-          />
+          <img src={this.props.url} alt="error" />
           <button className="donate">DONATE</button>
         </div>
 

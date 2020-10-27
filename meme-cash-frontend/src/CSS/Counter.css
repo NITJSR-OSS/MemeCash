@@ -2,7 +2,7 @@
   position: relative;
   left: 10%;
   display: flex;
-  padding: 10px;
+  padding-bottom: 10px;
 }
 .btn-vote {
   display: flex;
