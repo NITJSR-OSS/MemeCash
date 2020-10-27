@@ -1,0 +1,32 @@
+.card {
+  /* position: absolute; */
+  background-color: #bbb;
+  width: 30%;
+  margin: 5vh auto;
+  border-radius: 5px;
+}
+
+.image img {
+  width: 90%;
+  height: 200px;
+  position: relative;
+  left: 5%;
+  padding: 5px;
+}
+
+.donate {
+  /* z-index: 1; */
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -300%);
+  padding: 10px;
+  border-radius: 5px;
+  color: #ddd;
+  background-color: rgb(82, 6, 65);
+  border: 1px solid rgb(31, 1, 24);
+  visibility: hidden;
+}
+.vote {
+  position: relative;
+}
