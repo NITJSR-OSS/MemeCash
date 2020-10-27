@@ -1,7 +1,6 @@
+import React, { Component } from "react";
 import Counter from "../Components/Counter";
 import "../CSS/Card.css";
-
-import React, { Component } from "react";
 import axios from "axios";
 
 class Cards extends Component {
