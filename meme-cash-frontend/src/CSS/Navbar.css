@@ -1,0 +1,17 @@
+.nav {
+  display: flex;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.734);
+  padding: 20px;
+  color: #ddd;
+}
+
+.nav-right {
+  float: right;
+  position: absolute;
+  right: 10%;
+}
+.nav-left {
+  position: relative;
+  left: 10%;
+}
