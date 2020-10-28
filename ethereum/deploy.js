@@ -28,7 +28,7 @@ async function deployContract() {
       from: account,
       gas: 3000000,
     });
-   
+
   fse.writeFileSync(
     path.resolve(buildPath, "address.txt"),
     deployedContractAddress.options.address
