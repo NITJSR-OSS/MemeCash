@@ -4,8 +4,8 @@ const hdWalletProvider = require("truffle-hdwallet-provider");
 const Web3 = require("web3");
 
 const provider = new hdWalletProvider(
-  "Enter Your Ganache CLI mnemonic",
-  "Enter RPC address usually HTTP://127.0.0.1:7545"
+  "Metamask mnemonic here",
+  "https://kovan.infura.io/v3/b01d4ab35099466aa23bc12a4ed8f852"
 );
 
 const buildPath = path.join(__dirname, "../meme-cash-frontend/src/build");
@@ -26,9 +26,9 @@ async function deployContract() {
     })
     .send({
       from: account,
-      gas: 1000000,
+      gas: 3000000,
     });
-
+   
   fse.writeFileSync(
     path.resolve(buildPath, "address.txt"),
     deployedContractAddress.options.address
