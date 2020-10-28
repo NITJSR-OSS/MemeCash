@@ -1,0 +1,1 @@
+This folder contains code exclusive to setting up redux store. This will further have two subdirectories named actions and reducers.
