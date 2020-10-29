@@ -35,7 +35,7 @@ The project can be roughly divided into three sections:
 
 -  ### Expectations from you:
 
-- [ ] Some zeal and interest to work on the project.
+- [ ] Some real and interest to work on the project.
 
 - [ ] Some basic Git knowledge.
 
