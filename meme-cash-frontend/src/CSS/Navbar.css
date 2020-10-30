@@ -1,28 +1,56 @@
 .nav {
   display: flex;
+  align-items: center;
   width: 100%;
-  height: 2.5em;
+  /* height: 200px; */
   background-color: rgba(0, 0, 0, 0.734);
   align-items: center;
   color: #ddd;
   justify-content: space-around;
 }
 
-.account{
-  font-size: .6em;
+.account {
+  font-size: 0.6em;
   list-style-type: none;
 }
-.nav-right{
+.nav-left {
+  padding: 5px;
   display: flex;
   align-items: center;
-  
 }
-/* .nav-right {
-  float: right;
-  position: absolute;
-  right: 10%;
+.nav-right {
+  display: flex;
+  align-items: center;
 }
-.nav-left {
-  position: relative;
-  left: 10%;
-} */
+
+.logo {
+  animation: logo 10s infinite ease-in-out;
+  width: 80px;
+}
+
+@keyframes logo {
+  0% {
+    content: url(../Images/lg-removebg-preview.png);
+  }
+  14.28% {
+    content: url(../Images/lg1-removebg-preview.png);
+  }
+  28.57% {
+    content: url(../Images/lg2-removebg-preview.png);
+  }
+  42.85% {
+    content: url(../Images/lg3-removebg-preview.png);
+  }
+  57.14% {
+    content: url(../Images/lg4-removebg-preview.png);
+  }
+  71.42% {
+    content: url(../Images/lg5-removebg-preview.png);
+  }
+  85.71% {
+    content: url(../Images/lg6-removebg-preview.png);
+  }
+  100% {
+    content: url(../Images/logo2_copy-removebg-preview.png);
+  }
+}

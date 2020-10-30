@@ -1,14 +1,15 @@
 .card {
   /* position: absolute; */
   background-color: #bbb;
-  width: 30%;
+  width: 21%;
   margin: 5vh auto;
   border-radius: 5px;
 }
 
 .image img {
   width: 90%;
-  height: 200px;
+  height: 300px;
+  object-fit: contain;
   position: relative;
   left: 5%;
   padding: 5px;
