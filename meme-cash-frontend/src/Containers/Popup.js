@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useContext,useEffect,useState} from "react";
 import Modal from "react-modal";
 import "../CSS/Popup.css";
 import Upload from "../Components/Upload";
+
 
 const customStyles = {
   content: {
@@ -16,7 +17,8 @@ const customStyles = {
 };
 
 function Popup() {
-  const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [modalIsOpen, setIsOpen] =useState(false);
+ 
   function openModal() {
     setIsOpen(true);
   }
@@ -27,10 +29,15 @@ function Popup() {
     setIsOpen(false);
   }
 
+
+  useEffect(() => {
+    Modal.setAppElement('body');}
+    );
+
   return (
     <div className="popup">
       <button onClick={openModal} className="openModal">
-        +
+       +
       </button>
       <Modal
         isOpen={modalIsOpen}
@@ -42,7 +49,7 @@ function Popup() {
         <button onClick={closeModal} id="close">
           &#10005;
         </button>
-        <Upload />
+        <Upload closeModal={closeModal} />
       </Modal>
     </div>
   );
