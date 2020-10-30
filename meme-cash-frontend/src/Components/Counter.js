@@ -1,48 +1,58 @@
-import React, { Component } from "react";
+import React from "react";
 import "../CSS/Counter.css";
-import { BiCaretDown, BiCaretUp } from "react-icons/bi";
 
-class Counter extends Component {
-  constructor(props) {
-    super();
+import { TiArrowDownOutline,TiArrowUpOutline} from "react-icons/ti";
 
-    this.state = {
-      count: 0,
-    };
-  }
 
-  Increment() {
-    this.setState({
-      count: this.state.count + 1,
-    });
-  }
-  Decrement() {
-    this.setState({
-      count: this.state.count - 1,
-    });
-  }
 
-  render() {
+function Counter ({memeContract,
+  memeHash,
+  downvoteCount,
+  upvoteCount,
+  upvoted,
+  downvoted,
+  toggleUpvote,
+  toggleDownvote,
+  doanteEther
+}) 
+  
+
+  {
+
+  
+  
+
+  
     return (
       <div className="counter">
         <div className="btn-vote">
-          <div className="upvote">
-            <h4 onClick={() => this.Increment()}>
-              <BiCaretUp />
-            </h4>
+          <div className="upvote"  style={{color: upvoted &&'green'}}>
+            
+              <TiArrowUpOutline  className='inlineBlock' onClick={toggleUpvote}  />
+              <li className="upvoteCount inlineBlock">{upvoteCount}</li>
+           
           </div>
-          <div className="downvote">
-            <h4 onClick={() => this.Decrement()}>
-              <BiCaretDown />
-            </h4>
+          <div className="downvote" style={{color: downvoted &&'red'}}>
+             
+              <TiArrowDownOutline   className='inlineBlock' onClick={toggleDownvote} />
+              <li className="downvoteCount inlineBlock">{downvoteCount}</li>
+              
           </div>
+          
         </div>
-        <div>
+        {/* <div>
           <p>{this.state.count}</p>{" "}
+        </div> */}
+        <div className="donation">
+         
+          <button className='btn inlineBlock' onClick={doanteEther}>
+           DONATE
+          </button>
         </div>
+         
       </div>
-    );
-  }
+    )
+  
 }
 
 export default Counter;

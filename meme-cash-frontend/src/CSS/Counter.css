@@ -1,8 +1,10 @@
 .counter {
-  position: relative;
-  left: 10%;
+  
   display: flex;
-  padding-bottom: 10px;
+  padding: 5px 10px;
+  justify-content: space-between;
+  align-items: center;
+
 }
 .btn-vote {
   display: flex;
@@ -13,7 +15,28 @@
 }
 .upvote {
   padding: 0 5px;
+  display: flex;
+  align-items: center;
 }
 .downvote {
   padding: 0 5px;
+  display: flex;
+  align-items: center;
 }
+.inlineBlock{
+  display: inline-block;
+}
+.btn{
+  padding: 3px 5px;
+}
+.doantion{
+  display: flex;
+  
+}
+/* .wrap-donatio-amount{
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 0px;
+  left: 2px;
+} */
