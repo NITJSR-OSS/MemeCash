@@ -3,10 +3,17 @@
   padding: 8px 12px;
   cursor: pointer;
   border-radius: 4px;
-  background-color: rgb(82, 6, 65);
-  border: 1px solid rgb(31, 1, 24);
+  background-color:#1E183E;
+  border: 1px solid #7A5E15;
   font-size: 16px;
   color: #fff;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
 }
 #close {
   position: absolute;
@@ -26,9 +33,22 @@ input[type="file"] {
 }
 .openModal {
   background-color: rgba(0, 0, 0, 0);
-  border: 1px solid #0000;
+  /* border: 1px solid #0000;
   width: 30px;
+  
   font-size: 30px;
-  font-weight: bolder;
+  font-weight: bolder; */
+  border: 2px solid#7E6B2F;
   color: #fff;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color:#1E173D ;
+  margin-right: .5em;
+}
+.new-button:disabled,
+.new-button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
 }
