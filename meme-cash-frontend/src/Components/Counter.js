@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../CSS/Counter.css";
+import { BiCaretDown, BiCaretUp } from "react-icons/bi";
 
 class Counter extends Component {
   constructor(props) {
@@ -26,10 +27,14 @@ class Counter extends Component {
       <div className="counter">
         <div className="btn-vote">
           <div className="upvote">
-            <h4 onClick={() => this.Increment()}>&uarr;</h4>
+            <h4 onClick={() => this.Increment()}>
+              <BiCaretUp />
+            </h4>
           </div>
           <div className="downvote">
-            <h4 onClick={() => this.Decrement()}>&darr;</h4>
+            <h4 onClick={() => this.Decrement()}>
+              <BiCaretDown />
+            </h4>
           </div>
         </div>
         <div>
