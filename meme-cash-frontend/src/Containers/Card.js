@@ -36,7 +36,7 @@ class Cards extends Component {
               alt=""
             />
           )}
-          <button className="donate">DONATE</button>
+          <button className="donate">DONATE NOW</button>
         </div>
 
         <Counter className="vote" />

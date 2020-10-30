@@ -1,8 +1,8 @@
 .counter {
   position: relative;
-  left: 10%;
+  left: 15%;
   display: flex;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 .btn-vote {
   display: flex;
@@ -12,8 +12,8 @@
   cursor: pointer;
 }
 .upvote {
-  padding: 0 5px;
+  padding: 0 10px;
 }
 .downvote {
-  padding: 0 5px;
+  padding: 0 10px;
 }
