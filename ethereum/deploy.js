@@ -4,7 +4,7 @@ const hdWalletProvider = require("truffle-hdwallet-provider");
 const Web3 = require("web3");
 
 const provider = new hdWalletProvider(
-  "search nothing emotion brass cream surprise helmet festival chief hill sugar credit",
+  "<Metamask seed here>",
   "https://kovan.infura.io/v3/b01d4ab35099466aa23bc12a4ed8f852"
 );
 
