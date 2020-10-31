@@ -22,7 +22,7 @@ class Cards extends Component {
   };
   
   doanteEther= async ()=>{
-    await this.state.memeContract.methods.donate().send({from:this.context.account, vlaue:Math.pow(10,18)})
+    await this.state.memeContract.methods.donate().send({from:this.context.account, value:Math.pow(10,1)})
      .then(async ()=>{
       const totalDonation= await this.state.memeContract.methods.getTotalDonation().call();
       this.setState({totalDonation})

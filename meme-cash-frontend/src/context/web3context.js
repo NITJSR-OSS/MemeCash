@@ -13,7 +13,7 @@ export default class Web3ContextProvider extends Component {
     this.setState({ account: accounts[0] });
     const memeFactoryContract = await new web3.eth.Contract(
       this.state.memeFactoryABI,
-      "0xe0e85F3154438b3750dF1cA703B450Fd675796dA"
+      "0x4d167848d54b28e43de7Eb910bDE9EF13E7857E7"
     );
     this.setState({ memeFactoryContract });
     memeFactoryContract.methods

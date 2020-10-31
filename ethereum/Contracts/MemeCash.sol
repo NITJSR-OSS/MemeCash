@@ -42,7 +42,7 @@ contract MemeCash{
     function donate() public payable{
         require(msg.value>0);
         require(msg.sender!=owner);
-        owner.transfer(msg.value);
+        // owner.transfer(msg.value);
     }
     
     //upvoting logic
