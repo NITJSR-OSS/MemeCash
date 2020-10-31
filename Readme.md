@@ -1,5 +1,11 @@
 # MemeCash - Hacktoberfest 2020
 
+
+-  ### Update:
+The website is now hosted on IPFS. Please visit the link below:
+![MemeCash](https://jolly-star-4089.on.fleek.co/).
+Note 1: This is just a cdn for http://ipfs.infura.io/ipfs/QmUScDiTA3sCJNVg89VuCEh7ST5CcS3HxgEZCub6Lfnwre
+Note 2: In order to access this website, you need to have metamask extension installed in your browser.
   
 
 ![meme](https://raw.githubusercontent.com/NITJSR-OSS/MemeCash/master/readme_image.jpg)
