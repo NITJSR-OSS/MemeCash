@@ -18,6 +18,7 @@ class Cards extends Component {
     downvoted:false,
     loading:true,
     totalDonation:0,
+    owned:false
 
   };
   
@@ -51,6 +52,12 @@ class Cards extends Component {
      } 
 
   async componentDidMount() {
+    const owned = this.context.myMemes
+    this.setState({owned})
+    console.log(`owned ${owned}`);
+    //const owned = await this.context.myMemes.includes(this.props.memeAddress);
+   // this.setState({owned})
+    console.log(owned);
     const memeContract = await new this.context.web3.eth.Contract(
       this.context.memeABI,
       this.props.memeAddress
@@ -64,14 +71,15 @@ class Cards extends Component {
     this.setState({downvoteCount});
     const upvoteCount= await memeContract.methods.getTotalUpvotes().call();
     this.setState({upvoteCount});
-    this.setState({loading:false});
     const totalDonation= await memeContract.methods.getTotalDonation().call();
     this.setState({totalDonation})
     console.log('loaded card');
+    this.setState({loading:false});
     
   }
 
   render() {
+    console.log(this.context.myMemes);
     console.log(this.props);
     return (
        <>
@@ -89,7 +97,7 @@ class Cards extends Component {
           <FaEthereum className="inlineBlock" />
           <li className="inlineBlock">{this.state.totalDonation}</li>
           </div>
-          <button className="donate">DONATE</button>
+          <button className="donate">{this.state.owned}</button>
         </div>
         
 

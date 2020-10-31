@@ -16,6 +16,10 @@ export default class Web3ContextProvider extends Component {
       "0x4d167848d54b28e43de7Eb910bDE9EF13E7857E7"
     );
     this.setState({ memeFactoryContract });
+    const myMemes= await memeFactoryContract.methods
+      .getMyMemes()
+      .call().then((r)=>console.log(r))
+    this.setState({myMemes})
     memeFactoryContract.methods
       .getDeployedMemes()
       .call()
@@ -33,6 +37,7 @@ export default class Web3ContextProvider extends Component {
     memeABI: memesCash.abi,
     memeFactoryContract: null,
     deployedMemes: [],
+    myMemes:[]
   };
   render() {
     return (
