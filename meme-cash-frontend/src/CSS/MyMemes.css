@@ -1,0 +1,28 @@
+.myMemes {
+  display: inline-flex;
+}
+.myImage {
+  background-color: #444;
+  margin: 1em;
+}
+.myImage img {
+  padding: 10px;
+  max-height: 30vh;
+  object-fit: contain;
+  position: relative;
+  left: 0; /* max-width: 300px;
+  height: 300px; */
+  object-fit: contain;
+  display: block;
+}
+#donation {
+  display: flex;
+  align-items: center;
+  color: #ddd;
+  padding-left: 10px;
+}
+#votes {
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+}

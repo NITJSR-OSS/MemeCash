@@ -1,0 +1,14 @@
+.Account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.accountNo {
+  font-size: 0.6em;
+  text-decoration: underline;
+  color: #333;
+}
+.account {
+  font-size: 1em;
+  color: #111;
+}

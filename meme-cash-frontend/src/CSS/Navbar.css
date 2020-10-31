@@ -9,10 +9,6 @@
   justify-content: space-around;
 }
 
-.account {
-  font-size: 0.6em;
-  list-style-type: none;
-}
 .nav-left {
   padding: 5px;
   display: flex;
