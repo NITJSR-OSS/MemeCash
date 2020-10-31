@@ -1,5 +1,7 @@
-numpy 
+gunicorn==20.0.4
 flask
--f https://download.pytorch.org/whl/torch_stable.html                                                                                                                                                             
+numpy 
+Pillow
+-f https://download.pytorch.org/whl/torch_stable.html                                                                                                                                                           
 torch==1.6.0+cpu
-torchvision==0.8.1
+torchvision==0.7.0
