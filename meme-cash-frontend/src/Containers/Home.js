@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Card from "./Card";
 import "../CSS/Home.css";
 import Web3ContextProvider from "../context/web3context";
 

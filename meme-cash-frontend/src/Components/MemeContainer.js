@@ -7,7 +7,6 @@ import {Web3Context} from '../context/web3context'
 export default function MemeContainer() {
 
     const {account,deployedMemes,memeABI,web3} = useContext(Web3Context);
-    const [cardArray, setcardArray] = useState([]);
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
