@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <link href="static/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <center>
+            <div class='cont'>
+                
+            
+            {% if data == "meme" %}
+            <h1>It is a meme</h1>
+            
+            {%else%}
+            <h1>No Ether, F**k off!!-> Trying to fool us </h1>
+            
+            {%endif%}
+
+        </div>
+            
+            <img src="{{url_for('load_img')}}" alt='img'>
+            <a href="/" class='btn'>go back</a>
+
+        </center>
+        
+    </body>
+</html>
