@@ -3,8 +3,9 @@
   background-color: #bbb;
   max-width: 300px;
   /* height: calc(300px+2em); */
-  margin: 5vh auto;
+  margin: .5em 1em;
   border-radius: 5px;
+
 }
 .image{
   display: inline-block;

@@ -26,7 +26,7 @@ input[type="file"] {
   position: relative;
 }
 #uploaded-img {
-  max-width: 30%;
+  max-width: 100%;
 }
 .popup {
   z-index: 10;
@@ -52,3 +52,53 @@ input[type="file"] {
   background-color: #cccccc;
   color: #666666;
 }
+.image-box{
+  position: relative;
+  display: block;
+  max-width: 30%;
+}
+.loading-screen{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: calc(100% - 6px);
+  background-color:rgba(245, 222, 179, 0.425) ;
+  color: rgb(245, 222, 179);
+  font-size: 3em;
+  left: 0px;
+}
+.loader{
+  position: absolute;
+  display: block;
+ 
+  /* transform: translate(-50%,-50%); */
+  /* transform-origin: -50% -50%; */
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.loader2{
+  
+  display: inline-block;
+  margin-right: 5px;
+ 
+  /* transform: translate(-50%,-50%); */
+  /* transform-origin: -50% -50%; */
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes spin {
+  from {transform: rotate(0deg) }
+  to {transform: rotate(360deg) }
+}
+#error-in-uploading{
+  color: red;
+}
+#error-in-meme {
+  color: red;
+}
+
