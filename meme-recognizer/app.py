@@ -73,5 +73,5 @@ def predict_api():
 
 if __name__=="__main__":
     MODEL, CLASSES = load_model()
-    app.run(port=8080, debug=True)
+    app.run(debug=True)
     predict_api()
