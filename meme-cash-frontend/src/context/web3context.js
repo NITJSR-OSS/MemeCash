@@ -18,8 +18,8 @@ export default class Web3ContextProvider extends Component {
     this.setState({ memeFactoryContract });
     const myMemes= await memeFactoryContract.methods
       .getMyMemes()
-      .call().then((r)=>console.log(r))
-    this.setState({myMemes})
+      .call({from:accounts[0]}).then((myMemes)=>this.setState({myMemes}))
+    
     memeFactoryContract.methods
       .getDeployedMemes()
       .call()

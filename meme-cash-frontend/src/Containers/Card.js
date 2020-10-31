@@ -22,8 +22,8 @@ class Cards extends Component {
 
   };
   
-  doanteEther= async ()=>{
-    await this.state.memeContract.methods.donate().send({from:this.context.account, value:Math.pow(10,1)})
+  doanteEther= async (value)=>{
+    await this.state.memeContract.methods.donate().send({from:this.context.account, value:value})
      .then(async ()=>{
       const totalDonation= await this.state.memeContract.methods.getTotalDonation().call();
       this.setState({totalDonation})
@@ -52,11 +52,11 @@ class Cards extends Component {
      } 
 
   async componentDidMount() {
-    const owned = this.context.myMemes
-    this.setState({owned})
-    console.log(`owned ${owned}`);
-    //const owned = await this.context.myMemes.includes(this.props.memeAddress);
-   // this.setState({owned})
+    // const owned = this.context.myMemes.includes();
+    // this.setState({owned})
+    // console.log(`owned ${owned}`);
+    const owned = await this.context.myMemes.includes(this.props.memeAddress);
+   this.setState({owned})
     console.log(owned);
     const memeContract = await new this.context.web3.eth.Contract(
       this.context.memeABI,
@@ -85,7 +85,7 @@ class Cards extends Component {
        <>
       {! this.state.loading && 
       
-      <div className="card">
+      <div className="card"  style={{backgroundColor: this.state.owned &&'#7a5f16'}}>
         <div className="image">
           {this.state.memeHash && (
             <img
@@ -108,6 +108,7 @@ class Cards extends Component {
       
 
          <Counter className="vote" 
+         owned={this.state.owned}
          totalDonation={this.state.totalDonation}
         upvoteCount={this.state.upvoteCount} 
         upvoted={this.state.upvoted}

@@ -28,10 +28,28 @@
 }
 .btn{
   padding: 3px 5px;
+  background-color: #393939;
+  color: white;
+  border: solid #393939 ;
+  border-radius: 0px 5px 5px 0px;
+}
+.owned{
+  background-color: #bc243c;
 }
 .doantion{
   display: flex;
   
+}
+.amount-box{
+  padding: 3px;
+  border: 2px  solid #393939;
+  border-radius: 5px 0px 0px 5px;
+}
+.btn:disabled,
+.btn[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
 }
 /* .wrap-donatio-amount{
   display: flex;
