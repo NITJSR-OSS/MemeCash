@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "../CSS/Counter.css";
 
 import { TiArrowDownOutline,TiArrowUpOutline} from "react-icons/ti";
@@ -6,6 +6,7 @@ import { TiArrowDownOutline,TiArrowUpOutline} from "react-icons/ti";
 
 
 function Counter ({memeContract,
+  owned,
   memeHash,
   downvoteCount,
   upvoteCount,
@@ -18,6 +19,18 @@ function Counter ({memeContract,
   
 
   {
+
+    const [values, setValue] = useState(10);
+    const [desabled, setDesabled] = useState(false);
+
+    const handleChange=(e) =>{
+      const value = e.target.value.replace(/\+0|-/ig, '');
+      console.log(value);
+      if(value<=0){
+        setDesabled(true);
+      }else{setDesabled(false)}
+      setValue(value);
+    }
 
   
   
@@ -43,12 +56,20 @@ function Counter ({memeContract,
         {/* <div>
           <p>{this.state.count}</p>{" "}
         </div> */}
-        <div className="donation">
-         
-          <button className='btn inlineBlock' onClick={doanteEther}>
-           DONATE
-          </button>
-        </div>
+        { !owned ?   <div className="donation">
+                <input style={{minWidth: '3em', maxWidth:'4em'}} type="number" className='inlineBlock amount-box' value={values} onChange={handleChange} />
+                <button className='btn inlineBlock' onClick={(e)=>doanteEther(values)} disabled={desabled} >
+                DONATE
+                </button>
+                </div>
+                :
+                <li className=" btn owned inlineBlock">
+                  OWNED
+                </li>
+                
+              }
+
+          
          
       </div>
     )

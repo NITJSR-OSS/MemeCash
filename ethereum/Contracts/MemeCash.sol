@@ -65,6 +65,12 @@ contract MemeCash{
     function getTotalUpvotes() public view returns(uint){
         return totalUpvotes;
     }
+
+    function upvoted() public view returns(bool){
+        if(upvoters[msg.sender] != true )
+        return false;
+        return true;
+    }
      
     //downvoting logic
     function toggleDownvote() public{
@@ -85,6 +91,12 @@ contract MemeCash{
 
     function getTotalDownvotes() public view returns(uint){
         return totalDownvotes;
+    }
+
+    function downvoted() public view returns(bool){
+        if(downvoters[msg.sender] != true )
+        return false;
+        return true;
     }
 
     function getTotalDonation() public view returns (uint){
