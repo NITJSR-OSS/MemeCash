@@ -17,42 +17,37 @@ function Upload({ closeModal }) {
   const [file, setFile] = useState(null);
 
   const { account, memeFactoryContract } = useContext(Web3Context);
-  
-  const captureFile =async (e) => {
+
+  const captureFile = async (e) => {
     setLoading(true);
     // e.preventDefalult();
-    try{setDesableUpload(true);
-  const file = e.target.files[0];
-  setFile(URL.createObjectURL(e.target.files[0]));
-  const reader = new window.FileReader();
-  reader.readAsArrayBuffer(file);
-  reader.onloadend = (e2) => {
-    setBuffer(reader.result);
-    console.log(reader.result);
-  };
+    try {
+      setDesableUpload(true);
+      const file = e.target.files[0];
+      setFile(URL.createObjectURL(e.target.files[0]));
+      const reader = new window.FileReader();
+      reader.readAsArrayBuffer(file);
+      reader.onloadend = (e2) => {
+        setBuffer(reader.result);
+        console.log(reader.result);
+      };
 
-    // here we will check wether choosen image is meme or not
+      // here we will check wether choosen image is meme or not
 
+      setDesableUpload(false);
+    } catch (err) {
+      console.log(err);
+      document.getElementById("error-in-meme").innerHTML = "Not a meme.";
+    }
+    setLoading(false);
 
-  
-  setDesableUpload(false)}
-  catch(err){
-    console.log(err);
-    document.getElementById('error-in-meme').innerHTML='Not a meme.';
-       
-  }
-  setLoading(false);
-    
-
-   
     // then enable submit button
-    
   };
   const d = async (e) => {
     e.preventDefault();
     setUploading(true);
     console.log("hola");
-    try{
+    try {
       const responce = await ipfs.add(buffer);
       console.log(responce.path);
       await memeFactoryContract.methods
@@ -60,16 +55,16 @@ function Upload({ closeModal }) {
         .send({ from: account });
       closeModal();
       window.location.reload();
-    } catch(e){
-      
-          console.log(e);
-          const p=document.getElementById('error-in-uploading');
-         if(p){p.innerHTML='Not able to upload.<br /> <small>May be due to rejection of transection or, trying to upload a previously uploaded meme<small>';}
-          setUploading(false);
-          return;
-      
+    } catch (e) {
+      console.log(e);
+      const p = document.getElementById("error-in-uploading");
+      if (p) {
+        p.innerHTML =
+          "Not able to upload.<br /> <small>May be due to rejection of transection or, trying to upload a previously uploaded meme<small>";
+      }
+      setUploading(false);
+      return;
     }
-   
   };
 
   // const handelSubmit = (e) => {
@@ -96,19 +91,22 @@ function Upload({ closeModal }) {
   return (
     <div>
       <div className="image-box">
-       {loading && <div className="loading-screen">
-          <BiLoaderCircle className='loader' />
-        </div>}
-      <img
-        src={
-          file ??
-          "https://via.placeholder.com/150/000000/FFFFFF/?text=meme cash"
-        }
-        alt="jks"
-        id="uploaded-img"
-      /></div>
+        {loading && (
+          <div className="loading-screen">
+            <BiLoaderCircle className="loader" />
+          </div>
+        )}
+        <img
+          src={
+            file ??
+            "https://via.placeholder.com/150/000000/FFFFFF/?text=meme cash"
+          }
+          alt="jks"
+          id="uploaded-img"
+        />
+      </div>
       <p id="error-in-meme"></p>
-      <form >
+      <form>
         <div className=" ">
           <label className="new-button" htmlFor="upload">
             Chose Meme
@@ -116,7 +114,7 @@ function Upload({ closeModal }) {
 
           <input type="file" id="upload" onChange={captureFile} />
           <button className="new-button" disabled={desableUpload} onClick={d}>
-            {uploading &&<BiLoaderCircle className='loader2' />}
+            {uploading && <BiLoaderCircle className="loader2" />}
             UPLOAD
           </button>
           {/* <input  type='submit'   /> */}

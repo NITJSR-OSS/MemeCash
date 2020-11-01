@@ -10,3 +10,19 @@
 button {
   cursor: pointer;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #999;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e173d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e173dab;
+}
