@@ -4,7 +4,7 @@
 -  ### Update:
 The website is now hosted on IPFS. Please visit the link below:
 [MemeCash](https://jolly-star-4089.on.fleek.co/).
-Note 1: This is just a cdn for http://ipfs.infura.io/ipfs/QmUScDiTA3sCJNVg89VuCEh7ST5CcS3HxgEZCub6Lfnwre
+Note 1: This is just a cdn for http://ipfs.infura.io/ipfs/Qmcq3Zu7sdfyFRwcexFuiwTVf1fLwwsDRSn7GMzgJ1U3V2
 Note 2: In order to access this website, you need to have metamask extension installed in your browser.
   
 
